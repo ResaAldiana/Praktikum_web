@@ -1,0 +1,86 @@
+###
+POST http://localhost:10000/categories
+Content-Type: application/json
+
+{
+    "name": "Pakaian"
+}
+
+###
+POST http://localhost:10000/categories
+Content-Type: application/json
+{
+    "name": "minuman"
+}
+###
+POST http://localhost:10000/products
+Content-Type: application/json
+
+{
+  "name":"kaos",
+  "price":35000,
+  "categoryId":1
+}
+
+###
+POST http://localhost:10000/products
+Content-Type: application/json
+
+{
+    "name": "minuman Coklat",
+    "price": 20000,
+    "categoryId": 2
+}
+
+###
+POST http://localhost:10000/suppliers
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "pt.simpanan impian",
+  "createdAt": "2024-01-15T11:26:04.447Z"
+}
+
+
+###
+POST http://localhost:10000/product-transactions
+Content-Type: application/json
+
+{
+  "id": 1,
+  "productId": 1,
+  "supplierId": 1,
+  "qty": 4,
+  "transactionType": "BNI",
+  "createdAt": "2024-01-15T11:29:32.976Z"
+}
+
+###
+GET http://localhost:10000/product-transactions
+
+###
+GET http://localhost:10000/products/1
+
+###
+POST http://localhost:10000/sales
+Content-Type: application/json
+
+{
+    "productId": 1,
+    "qty": 2,
+    "total": 70000
+}
+
+###
+POST http://localhost:10000/sales
+Content-Type: application/json
+
+{
+    "productId": 1,
+    "qty": 1,
+    "total": 35000
+}
+
+###
+DELETE  http://localhost:10000/categories/2
